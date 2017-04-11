@@ -1,0 +1,89 @@
+
+<html>
+	<head>
+		<title>Proyecto V3</title>
+		<Script>
+		/*Linea para preparar el dom cuando el Doc este cargado*/
+			document.addEventListener("DOMContentLoaded", function(event){
+				
+				
+				debugger
+				
+				document.getElementById("titulo").style.color="red";
+				//document.getElementById("titulo2").style.visibility="hidden";
+				document.getElementById("titulo3").style.backgroundColor="black";
+				document.getElementById("titulo3").style.color="white";
+				
+				document.getElementById("titulo3").addEventListener("click", function(event){
+					//alert("Presionaron click sobre el titulo3");
+					document.getElementById("titulo3").style.backgroundColor="blue";
+					document.getElementById("titulo3").style.color="red";
+				});
+					
+				document.getElementById("txtNombres").addEventListener("keypress", function(event)
+				{
+					//alert("presionaron una tecla");
+					document.getElementById("titulo3").style.backgroundColor="green";
+					document.getElementById("titulo3").style.color="orange";
+				});
+				
+				document.getElementById("txtNombres").addEventListener("focus", function(event)
+				{
+					//alert("presionaron una tecla");
+					document.getElementById("titulo").style.backgroundColor="yellow";
+					document.getElementById("titulo").style.color="blue";
+				});
+				
+				document.getElementById("txtapellido").addEventListener("blur", function(event)
+				{
+					//alert("presionaron una tecla");
+					document.getElementById("titulo").style.backgroundColor="orange";
+					document.getElementById("titulo").style.color="white";
+				});
+				
+				/*document.getElementsByClassName("btn1")[0].addEventListener("click", function(event)
+				{
+					//alert("presionaron una tecla");
+					document.getElementsByTagName("h1")[0].style.color="grey";
+				});*/
+
+				document.getElementsByClassName("btn1")[0].addEventListener("omouseover", function(event)
+				{
+					//alert("presionaron una tecla");
+					document.getElementsByTagName("h1")[0].style.backgroundColor="green";
+				});		
+				
+				document.getElementsByClassName("btn1")[1].addEventListener("click", function(event)
+				{
+					//aplicamos evaluacion de nombres
+					if(document.getElementById("txtNombres").value=="")
+					{
+						alert("Ingrese su nombre");
+						document.getElementById("txtNombres").focus();
+					}
+						else 
+						{
+							alert("es correcto fue exitoso");
+						}				
+				});		
+				
+			});
+		</Script>
+		<!--<style>
+			h1 {
+				visibility:hidden 
+				}
+		</style>-->
+	</head>
+	
+	<Body>
+		<h1 id="titulo">Ejemplo de DOM</h1>
+		<h1 id="titulo2">Ejemplo de DOM 1</h1>
+		<h1 id="titulo3">Ejemplo de DOM 2</h1>
+		<input type="text" id="txtNombres" placeholder="ingrese su nombre">
+		<input type="text" id="txtapellido" placeholder="ingrese su apellido">
+		<!--<input type="button" class="btn1" value="Cambiar de color t2">-->
+		<input type="button" class="btn1" value="Cambiar de color t2">
+		<input type="button" class="btn1" value="enviar datos">
+	</Body>
+</html>

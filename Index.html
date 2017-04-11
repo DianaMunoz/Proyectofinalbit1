@@ -1,0 +1,263 @@
+<html>
+	<Head>
+		<!--Esta pagina esta conbinada con el menu de materialice -->
+		<meta charset="UTF-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+		 <!-- CSS  -->
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+		<link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+		<!--intoruccion de swiper -->
+		<!-- Link Swiper's CSS -->
+		<link rel="stylesheet" href="http://idangero.us/swiper/dist/css/swiper.min.css">
+		<!--intoruccion de swiper 
+		<script src="dist/js/swiper.js"></script>
+	  <link href="dist/css/swiper.css" rel="stylesheet">
+	  <script src="dist/sweetalert.min.js"></script>
+	  <link rel="stylesheet" type="text/css" href="dist/sweetalert.css">
+	  <link href="index.html"/>-->
+		
+		<script> 
+
+
+		  $(document).ready(function(){
+			// the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+			$('.modal').modal();
+			
+			
+			$('#Familia1').click(function(){
+			    AbrilModal("Familia 1", "shdkashdaskdnask dsadasdklsajldjas asdas <br> sdjsdjdjdjs ");
+			});
+			
+		  });
+						
+		
+		 
+        function AbrilModal(mensaje,titulo) {
+		 $('#tituloModal').html("");
+		 $('#textoModal').html("");
+		 
+		 
+		 $('#tituloModal').append(titulo);
+		 $('#textoModal').append(mensaje);
+		 $('#textoModal').html("");
+		 
+		 
+		 $('#modal1').modal('open');
+		
+        }		
+		</script>
+	</head>
+	
+	<style>
+		
+		html, body {
+			position: relative;
+			height: 100%;
+		}
+		body {
+			background: #eee;
+			font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+			font-size: 14px;
+			color:#000;
+			margin: 0;
+			padding: 0;
+		}
+		.swiper-container {
+			width: 100%;
+			height: 100%;
+			background: #000;
+		}
+		.swiper-slide {
+			font-size: 18px;
+			color:#fff;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+			padding: 40px 60px;
+		}
+		.parallax-bg {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 130%;
+			height: 100%;
+			-webkit-background-size: cover;
+			background-size: cover;
+			background-position: center;
+		}
+		.swiper-slide .title {
+			font-size: 41px;
+			font-weight: 300;
+		}
+		.swiper-slide .subtitle {
+			font-size: 21px;
+		}
+		.swiper-slide .text {
+			font-size: 14px;
+			max-width: 400px;
+			line-height: 1.3;
+		}
+		#tamanoimg{
+		width:50px;
+		height:50px;
+		}
+	</style>
+	<body>	
+		<div class="swiper-container">
+			<!-- Additional required wrapper -->
+			<div class="parallax-bg" style="background-image:url(http://imagenesfotos.com/wp-content/2009/07/paisajes-del-cielo-5.jpg)" data-swiper-parallax="-23%"></div>
+				
+				<nav role="navigation">
+					<div class="row container"><a id="logo-container" href="#" class="center brand-logo">
+					<p></p>
+					<img width="80px" height="80px" src="https://comunidadpedacitodecielo.files.wordpress.com/2016/07/13227168_880885455370210_814087698979683557_n.png?w=200&h=200&crop=1" alt align="center">
+					</a>
+					</div>
+					<br>
+					<br>
+	<!--				<div class="nav-wrapper container">			
+
+<!--					
+					  <ul class="left-side hide-on-med-and-down">
+						<li><a href="#">Inicio</a></li>
+					  </ul>
+					  <ul class="right hide-on-med-and-down">
+						<li><a href="#">Acerca de</a></li>
+					  </ul>
+						<ul class="right hide-on-med-and-down">
+						<li><a href="#">Contactenos</a></li>
+					  </ul>
+					
+					  <ul id="nav-mobile" class="side-nav  blue accent-4">
+						<li><a href="#">Inicio</a></li>
+						<li><a href="#">Acerca de</a></li>
+						 <li><a href="#">Contactenos</a></li>
+					  </ul>
+					  <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+					</div>-->
+				</nav>
+				
+				<br>
+				<br>
+				<br>
+			<div class="swiper-wrapper">
+				<!-- Slides -->
+				<div class="swiper-slide">
+					<div class="container">
+					   <div class="row center">
+							<div class="header col s3 light" id="Familia1">
+								<img width="50px" height="50px" src="https://www.bbva.com/es/wp-content/uploads/2015/12/bbva-educacion-e1464704439593-1920x0-c-f.jpg" alt align="center">
+								<p>Familia 11</p>
+							</div>
+							<div class="header col s3 light">
+								<img id="tamanoimg" src="https://www.bbva.com/es/wp-content/uploads/2015/12/bbva-educacion-e1464704439593-1920x0-c-f.jpg" alt align="center">
+								<p>Nosotros</p>
+							</div>
+							<div class="header col s3 light">
+								<img id="tamanoimg" src="http://www.theowlteacher.com/wp-content/uploads/2016/08/teachingelaborationwrting-e1470332790905.jpg" alt="https://www.instagram.com/p/BR6NqnBAMu8/?tagged=educacioninfantil" align="center">
+								<p>Noticias</p>
+							</div>
+							<div class="header col s3 light">
+							<img id="tamanoimg"  src="http://scontent.cdninstagram.com/t51.2885-15/s750x750/sh0.08/e35/17127212_215389495608656_7971971617959968768_n.jpg?ig_cache_key=MTQ2OTgwMjgxNjk4MTA2MzkwMQ%3D%3D.2" alt align="center">
+								<p>Biblioteca</p>
+							</div>
+					  </div>
+					  
+					   <div class="row center">
+						<div class="header col s3 light">
+							<img id="tamanoimg"  src="https://www.bbva.com/es/wp-content/uploads/2015/12/bbva-educacion-e1464704439593-1920x0-c-f.jpg" alt align="center">
+							<p>Familia</p>
+						</div>
+						<div class="header col s3 light">
+							<img id="tamanoimg"  src="https://www.bbva.com/es/wp-content/uploads/2015/12/bbva-educacion-e1464704439593-1920x0-c-f.jpg" alt align="center">
+							<p>Nosotros</p>
+						</div>
+						<div class="header col s3 light">
+							<img id="tamanoimg"  src="http://www.theowlteacher.com/wp-content/uploads/2016/08/teachingelaborationwrting-e1470332790905.jpg" alt="https://www.instagram.com/p/BR6NqnBAMu8/?tagged=educacioninfantil" align="center">
+							<p>Noticias</p>
+						</div>
+						<div class="header col s3 light">
+						<img id="tamanoimg"  src="http://scontent.cdninstagram.com/t51.2885-15/s750x750/sh0.08/e35/17127212_215389495608656_7971971617959968768_n.jpg?ig_cache_key=MTQ2OTgwMjgxNjk4MTA2MzkwMQ%3D%3D.2" alt align="center">
+							<p>Biblioteca</p>
+						</div>
+					  </div>			  
+					</div>	
+				</div>
+				
+				<div class="swiper-slide">
+				<div class="container center">
+						<div class="row">
+							<div class="header col l4 s4 light">
+							<img id="tamanoimg"  src="http://scontent.cdninstagram.com/t51.2885-15/s750x750/sh0.08/e35/17127212_215389495608656_7971971617959968768_n.jpg?ig_cache_key=MTQ2OTgwMjgxNjk4MTA2MzkwMQ%3D%3D.2" alt align="center">
+								<p>Biblioteca</p>
+							</div>
+							<div class="header col l4 s4 light">
+							<img id="tamanoimg"  src="http://scontent.cdninstagram.com/t51.2885-15/s750x750/sh0.08/e35/17127212_215389495608656_7971971617959968768_n.jpg?ig_cache_key=MTQ2OTgwMjgxNjk4MTA2MzkwMQ%3D%3D.2" alt align="center">
+								<p>Biblioteca</p>
+							</div>
+							<div class="header col l4 s4 light">
+							<img id="tamanoimg"  src="http://scontent.cdninstagram.com/t51.2885-15/s750x750/sh0.08/e35/17127212_215389495608656_7971971617959968768_n.jpg?ig_cache_key=MTQ2OTgwMjgxNjk4MTA2MzkwMQ%3D%3D.2" alt align="center">
+								<p>Biblioteca</p>
+							</div>
+						</div>
+						
+						<div class="row">
+							<div class="col l4 s4">
+							<img id="tamanoimg"  src="http://scontent.cdninstagram.com/t51.2885-15/s750x750/sh0.08/e35/17127212_215389495608656_7971971617959968768_n.jpg?ig_cache_key=MTQ2OTgwMjgxNjk4MTA2MzkwMQ%3D%3D.2" alt align="center">
+								<p>Biblioteca</p>
+							</div>
+							<div class="col l4 s4 light">
+							<img id="tamanoimg"  src="http://scontent.cdninstagram.com/t51.2885-15/s750x750/sh0.08/e35/17127212_215389495608656_7971971617959968768_n.jpg?ig_cache_key=MTQ2OTgwMjgxNjk4MTA2MzkwMQ%3D%3D.2" alt align="center">
+								<p>Biblioteca</p>
+							</div>
+							<div class="col l4 s4 light">
+							<img id="tamanoimg"  src="http://scontent.cdninstagram.com/t51.2885-15/s750x750/sh0.08/e35/17127212_215389495608656_7971971617959968768_n.jpg?ig_cache_key=MTQ2OTgwMjgxNjk4MTA2MzkwMQ%3D%3D.2" alt align="center">
+								<p>Biblioteca</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			<!--	<div class="swiper-slide">Slide 3</div>-->
+			
+			</div>
+			<!-- If we need pagination -->
+			<div class="swiper-pagination"></div>
+			
+			
+			<div id="modal1" class="modal bottom-sheet">
+				<div class="modal-content">
+				  <h4 id="tituloModal"></h4>
+				  <p id="textoModal"></p>
+				</div>
+				<div class="modal-footer">
+				  <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Aceptar</a>
+				</div>
+			  </div>
+			  
+			<!-- If we need navigation buttons -->
+			<div class="swiper-button-prev"></div>
+			<div class="swiper-button-next"></div>
+			
+			<!-- If we need scrollbar -->
+			<div class="swiper-scrollbar"></div>
+
+			</div>
+
+		<!-- Swiper JS -->
+		<script src="http://idangero.us/swiper/dist/js/swiper.min.js"></script>
+		<script>
+		var swiper = new Swiper('.swiper-container',
+		{pagination: '.swiper-pagination',
+		paginationClickable: true,
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        parallax: true,
+        speed: 600,
+		});
+		</script>
+		<script src="js/materialize.js"></script>
+		<script src="js/init.js"></script>
+	</Body>
+</html>

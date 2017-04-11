@@ -1,0 +1,243 @@
+<html>
+	<Head>
+		<!--Esta pagina esta conbinada con el menu de materialice -->
+		<meta charset="UTF-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+		 <!-- CSS  -->
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+		<link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+		<!--intoruccion de swiper -->
+		<!-- Link Swiper's CSS -->
+		<link rel="stylesheet" href="http://idangero.us/swiper/dist/css/swiper.min.css">
+		<!--intoruccion de swiper 
+		<script src="dist/js/swiper.js"></script>
+	  <link href="dist/css/swiper.css" rel="stylesheet">
+	  <script src="dist/sweetalert.min.js"></script>
+	  <link rel="stylesheet" type="text/css" href="dist/sweetalert.css">
+	  <link href="index.html"/>-->
+		
+		<script>	$(document).ready(function()
+			{
+			
+				$("Button").click(function()
+				{
+					if($("#txtnombreapellido").val()==""||$("#txtnombreapellido").hasClass("invalid")==true)
+								{
+									Materialize.toast('Inserte su nombre y apellido!', 4000) // 4000 is the duration of the toast
+									$("#txtnombreapellido").focus();
+								}
+								else if ($("#txtTel").val()==""||$("#txtTel").hasClass("invalid")==true)
+								{
+									alert("Ingrese su Telefono");
+									$("#txtTel").focus();
+								}
+								else if ($("#txtSMS").val()==""||$("#txtSMS").hasClass("invalid")==true) 
+								{
+									Materialize.toast('Inserte su nombre y apellido!', 4000)
+									$("#txtSMS").focus();
+								}
+								else if ($("#email").val()==""||$("#email").hasClass("invalid")==true)  
+								{
+									alert("Ingrese su correo :D");
+									$("#email").focus();
+								}
+								else{
+									alert("Perfecto, datos ingresados");
+									$("#procesarGif").show(200);
+									materialize.toast('Correcto',0)
+									setTime(function()
+									{
+									materialize.toast('Datos restaurados',6000)
+									$("#txtnombreapellido").val("");
+									$("#txtTel").val("");
+									$("#txtSMS").val("");
+									$("#email").val("");
+									$("input").val("");
+									$("#txtnombreapellido").focus();
+									},5000);
+									}
+				});
+				
+				
+				/*swiper
+				var swiper = new Swiper('.swiper-container', {
+				pagination: '.swiper-pagination',
+				paginationClickable: true
+				});   */
+			});
+			
+			</script>
+	</head>
+	
+	<style>
+		
+		html, body {
+			position: relative;
+			height: 100%;
+		}
+		body {
+			background: #eee;
+			font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+			font-size: 14px;
+			color:#000;
+			margin: 0;
+			padding: 0;
+		}
+		.swiper-container {
+			width: 100%;
+			height: 100%;
+			background: #000;
+		}
+		.swiper-slide {
+			font-size: 18px;
+			color:#fff;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+			padding: 40px 60px;
+		}
+		.parallax-bg {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 130%;
+			height: 100%;
+			-webkit-background-size: cover;
+			background-size: cover;
+			background-position: center;
+		}
+		.swiper-slide .title {
+			font-size: 41px;
+			font-weight: 300;
+		}
+		.swiper-slide .subtitle {
+			font-size: 21px;
+		}
+		.swiper-slide .text {
+			font-size: 14px;
+			max-width: 400px;
+			line-height: 1.3;
+		}
+		#tamanoimg{
+		width:50px;
+		height:50px;
+		}
+	</style>
+	<body>	
+		<div class="swiper-container">
+			<!-- Additional required wrapper -->
+			<div class="parallax-bg" style="background-image:url(http://imagenesfotos.com/wp-content/2009/07/paisajes-del-cielo-5.jpg)" data-swiper-parallax="-23%"></div>
+				
+				<nav role="navigation">
+					<div class="row container"><a id="logo-container" href="#" class="center brand-logo">
+					<p></p>
+					<img width="80px" height="80px" src="https://comunidadpedacitodecielo.files.wordpress.com/2016/07/13227168_880885455370210_814087698979683557_n.png?w=200&h=200&crop=1" alt align="center">
+					</a>
+					</div>
+					<br>
+					<br>
+	<!--				<div class="nav-wrapper container">			
+
+<!--					
+					  <ul class="left-side hide-on-med-and-down">
+						<li><a href="#">Inicio</a></li>
+					  </ul>
+					  <ul class="right hide-on-med-and-down">
+						<li><a href="#">Acerca de</a></li>
+					  </ul>
+						<ul class="right hide-on-med-and-down">
+						<li><a href="#">Contactenos</a></li>
+					  </ul>
+					
+					  <ul id="nav-mobile" class="side-nav  blue accent-4">
+						<li><a href="#">Inicio</a></li>
+						<li><a href="#">Acerca de</a></li>
+						 <li><a href="#">Contactenos</a></li>
+					  </ul>
+					  <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+					</div>-->
+				</nav>
+				
+	
+				<br>
+			<div class="swiper-wrapper">
+				<!-- Slides -->
+				<div class="swiper-slide">
+					<div class="container">
+					   <div class="row center">
+							<div class="header col s12 light">
+								<h3>Contactenos</h3>
+							</div>
+							</div>
+						<div class="row center">
+							<div class="header col s6 light">
+								<img id="tamanoimg" src="https://www.bbva.com/es/wp-content/uploads/2015/12/bbva-educacion-e1464704439593-1920x0-c-f.jpg" alt align="center">
+								<p>telefono</p>
+							</div>
+							<div class="header col s6 light">
+								<img id="tamanoimg" src="http://www.theowlteacher.com/wp-content/uploads/2016/08/teachingelaborationwrting-e1470332790905.jpg" alt="https://www.instagram.com/p/BR6NqnBAMu8/?tagged=educacioninfantil" align="center">
+								<p>Chat</p>
+							</div>
+						</div>
+						<div class="row center">
+							<div class="header col s6 light">
+								<img id="tamanoimg" src="https://www.bbva.com/es/wp-content/uploads/2015/12/bbva-educacion-e1464704439593-1920x0-c-f.jpg" alt align="center">
+								<p>correo</p>
+							</div>
+							<div class="header col s6 light">
+								<img id="tamanoimg" src="http://www.theowlteacher.com/wp-content/uploads/2016/08/teachingelaborationwrting-e1470332790905.jpg" alt="https://www.instagram.com/p/BR6NqnBAMu8/?tagged=educacioninfantil" align="center">
+								<p>Ubicación</p>
+							</div>
+						</div>
+						<div class="row center">
+							<div class="header col s12 light">
+								<img id="tamanoimg" src="http://www.theowlteacher.com/wp-content/uploads/2016/08/teachingelaborationwrting-e1470332790905.jpg" alt="https://www.instagram.com/p/BR6NqnBAMu8/?tagged=educacioninfantil" align="center">
+					<p>Inicio</p>
+							</div>
+						</div>
+					  
+					 	  
+					</div>	
+				</div>
+				
+				
+			<div class="swiper-slide">
+			<div class="container center">
+		
+			<h4>Ubicación</h4>
+			<iframe width="300px"; height="300px"; src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.4394789485887!2d-74.06405418597974!3d4.693445243029084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9ac4516d2869%3A0x9bbe9a9cc2ceba18!2sIglesia+Santo+Domingo+Savio!5e0!3m2!1ses-419!2sco!4v1491449381012" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+<p> inicio </p>							</div>	
+							
+								</div>
+			
+			</div>
+			<!-- If we need pagination -->
+			<div class="swiper-pagination"></div>
+			
+			<!-- If we need navigation buttons -->
+			<div class="swiper-button-prev"></div>
+			<div class="swiper-button-next"></div>
+			
+			<!-- If we need scrollbar -->
+			<div class="swiper-scrollbar"></div>
+
+			</div>
+
+		<!-- Swiper JS -->
+		<script src="http://idangero.us/swiper/dist/js/swiper.min.js"></script>
+		<script>
+		var swiper = new Swiper('.swiper-container',
+		{pagination: '.swiper-pagination',
+		paginationClickable: true,
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        parallax: true,
+        speed: 600,
+		});
+		</script>
+		<script src="js/materialize.js"></script>
+		<script src="js/init.js"></script>
+	</Body>
+</html>

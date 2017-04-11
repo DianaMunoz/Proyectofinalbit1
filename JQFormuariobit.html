@@ -1,0 +1,173 @@
+<Html>
+
+	<Head>
+	<meta charset="UTF-8">
+	 <!-- CSS  -->
+	  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+	  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js">
+	</script>
+	
+<script>
+	$(document).ready(function()
+	{
+	
+		$("Button").click(function()
+		{
+			if($("#txtnombreapellido").val()==""||$("#txtnombreapellido").hasClass("invalid")==true)
+						{
+							Materialize.toast('Inserte su nombre y apellido!', 4000) // 4000 is the duration of the toast
+							$("#txtnombreapellido").focus();
+						}
+						else if ($("#txtTel").val()==""||$("#txtTel").hasClass("invalid")==true)
+						{
+							alert("Ingrese su Telefono");
+							$("#txtTel").focus();
+						}
+						else if ($("#txtSMS").val()==""||$("#txtSMS").hasClass("invalid")==true) 
+						{
+							Materialize.toast('Inserte su nombre y apellido!', 4000)
+							$("#txtSMS").focus();
+						}
+						else if ($("#email").val()==""||$("#email").hasClass("invalid")==true)  
+        				{
+							alert("Ingrese su correo :D");
+							$("#email").focus();
+						}
+						else{
+							alert("Perfecto, datos ingresados");
+							$("#procesarGif").show(200);
+							materialize.toast('Correcto',0)
+							setTime(function()
+							{
+							materialize.toast('Datos restaurados',6000)
+							$("#txtnombreapellido").val("");
+							$("#txtTel").val("");
+							$("#txtSMS").val("");
+							$("#email").val("");
+							$("input").val("");
+							$("#txtnombreapellido").focus();
+							},5000);
+							}
+		});
+		
+	});
+	</script>
+	</head>
+	<Body>
+		<nav class="black">
+			<div class="nav-wrapper container">
+				<a href="#" class="brand-logo">Logo</a>
+				<ul class="right hide-on-med-and-down">
+					<li>
+						<a href="#">Inicio</a>
+					</li>
+				</ul>
+				<ul class="right hide-on-med-and-down">
+					<li>
+						<a href="#">Blog</a>
+					</li>
+				</ul>
+				<ul class="right hide-on-med-and-down">
+					<li>
+						<a href="#">Biblioteca</a>
+					</li>
+				</ul>
+				
+				<ul id="nav-mobile" class="side-nav">
+					<li>
+						<a href="#">Inicio</a>
+					</li>
+					<li>
+						<a href="#">Blog</a>
+					</li>
+					<li>
+						<a href="#">Biblioteca</a>
+					</li>
+				</ul>
+				
+				 <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+			</div>
+		</nav>
+		
+		<div Class="container">
+			<div class="row">
+				<div class="col s12 l12 m12">
+				<h1 id="titulo" class="header center black-text">Formulario de contacto</h1>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="input-field col s6">
+					 <i class="material-icons prefix">account_circle</i>
+					<input value="" class="validate" id="txtnombreapellido" type="text" data-length="10">
+					<label for="txtnombreapellido" data-error="Maximo 10 caracteres" data-success="Bien hecho">First Name</label>
+				</div>
+				<div class="input-field col s6">
+					<i class="material-icons prefix">phone</i>
+					<input value="" class="validate" id="txtTel" type="text" data-length="10">
+					<label for="txtTel" data-error="Maximo 10 caracteres" data-success="Bien hecho">Telefono</label>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="input-field col s6">
+					 <i class="material-icons prefix">email</i>
+					<input value="" class="validate" id="txtSMS" type="text" data-length="30">
+					<label for="txtSMS" data-error="Maximo 30 caracteres" data-success="Bien hecho">Mensaje</label>
+				</div>
+				<div class="input-field col s6">
+					<i class="material-icons prefix">email</i>
+					 <input id="email" type="email" class="validate">
+					<label for="email">Email</label>
+				</div>	
+			</div>
+			
+			<div class="row">
+				<div class="input-field col s6">
+					<p>Hola<p>
+					</div>
+				<div class="input-field col s6">
+					<button class="btn miBtn waves-effect waves-light" id="miBtn" type="submit" name="action">Submit
+						<i class="material-icons right">send</i>
+					</button>
+								<img id="procesarGif" src="image/mail-animated.gif" alt="" height="200" width="200" style="display:none">
+				</div>
+			</div>
+			
+		</div>
+		
+		<footer class="page-footer">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">Footer Content</h5>
+                <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Links</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2014 Copyright Text
+            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            </div>
+          </div>
+        </footer>
+	  <!--  Scripts-->
+      
+	
+	  <script src="js/materialize.js"></script>
+	  <script src="js/init.js"></script>
+
+	</body>
+</html>
