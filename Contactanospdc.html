@@ -236,6 +236,77 @@
 					<p> inicio </p>							
 				</div>	
 			</div>
+
+		<div class="swiper-slide">
+				<div class="container center">
+					<div Class="container">
+							<div class="row">
+								<div class="col s12 l12 m12">
+								<h4 id="titulo" class="header center white-text">Formulario de contacto</h4>
+								</div>
+							</div>
+							
+							<div class="row">
+								<div class="input-field col s6">
+									 <i class="material-icons prefix">account_circle</i>
+									<input value="" class="validate" id="txtnombreapellido" type="text" data-length="10">
+									<label for="txtnombreapellido" data-error="Maximo 10 caracteres" data-success="Bien hecho">First Name</label>
+								</div>
+								<div class="input-field col s6">
+									<i class="material-icons prefix">phone</i>
+									<input value="" class="validate" id="txtTel" type="text" data-length="10">
+									<label for="txtTel" data-error="Maximo 10 caracteres" data-success="Bien hecho">Telefono</label>
+								</div>
+							</div>
+							
+							<div class="row">
+								<div class="input-field col s6">
+									 <i class="material-icons prefix">email</i>
+									<input value="" class="validate" id="txtSMS" type="text" data-length="30">
+									<label for="txtSMS" data-error="Maximo 30 caracteres" data-success="Bien hecho">Mensaje</label>
+								</div>
+								<div class="input-field col s6">
+									<i class="material-icons prefix">email</i>
+									 <input id="email" type="email" class="validate">
+									<label for="email">Email</label>
+								</div>	
+							</div>
+							
+							<div class="row">
+								<div class="input-field col s6">
+									<p><p>
+									</div>
+								<div class="input-field col s6">
+									<button class="btn miBtn waves-effect waves-light" id="miBtn" type="submit" name="action">Submit
+										<i class="material-icons right">send</i>
+									</button>
+											<!--<img id="procesarGif" src="image/mail-animated.gif" alt="" height="200" width="200" style="display:none">
+								--></div>
+							</div>
+				
+					</div>							
+				</div>	
+			</div>
+			
+			<div class="swiper-slide">
+				<div class="container center">
+			
+					<h4>Telefono</h4>
+					<p> 3016386603 </p>							
+				</div>	
+			</div>
+			<div class="swiper-slide">
+				<div class="container center">
+			
+					<h4>Chat</h4>
+					<div class="boton">
+					<a href="whatsapp://send?text=(titulo-de-tu-website) - (url -de-tu-website)" data-action="share/whatsapp/share" >Compartir</a></div>					
+				</div>	
+			</div>
+			
+			</div>
+||||||| .r3
+=======
 			
 		<div class="swiper-slide">
 				<div class="container center">
@@ -305,6 +376,7 @@
 			</div>
 			
 			</div>
+
 			<!-- If we need pagination -->
 			<div class="swiper-pagination"></div>
 			
@@ -326,7 +398,8 @@
         nextButton: '.swiper-button-next',
         prevButton: '.swiper-button-prev',
         parallax: true,
-        speed: 600,
+		  effect: 'cube',
+            speed: 600,
 		});
 		</script>
 		<script src="js/materialize.js"></script>
