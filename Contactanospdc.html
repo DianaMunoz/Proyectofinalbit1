@@ -19,8 +19,28 @@
 	  <link rel="stylesheet" type="text/css" href="dist/sweetalert.css">
 	  <link href="index.html"/>-->
 		
-		<script>	$(document).ready(function()
-			{
+		<script>
+		    $(document).ready(function()
+			{   
+			    $("#irubicacion").click(function(){
+					 setTimeout(function(){
+						 $(".swiper-button-next").trigger("click");
+					 }, 1000);
+				});
+				
+				 $("#irformulario").click(function(){
+         setTimeout(function(){
+             $(".swiper-button-next").trigger("click");
+         }, 100);
+
+         setTimeout(function(){
+             $(".swiper-button-next").trigger("click");
+         }, 100);
+    });
+
+
+			
+			
 			
 				$("Button").click(function()
 				{
@@ -160,7 +180,7 @@
 					</div>-->
 				</nav>
 				
-				<br>
+	
 				<br>
 			<div class="swiper-wrapper">
 				<!-- Slides -->
@@ -171,6 +191,20 @@
 								<h3>Contactenos</h3>
 							</div>
 							</div>
+							<div class="row center">
+							<div class="header col s6 light">
+							<a href="#" id="irformulario">
+								<img id="tamanoimg" src="https://www.bbva.com/es/wp-content/uploads/2015/12/bbva-educacion-e1464704439593-1920x0-c-f.jpg" alt align="center">
+								<p>correo</p>
+							</a>
+							</div>
+							<div class="header col s6 light">
+								<a href="#" id="irubicacion">
+									<img id="tamanoimg" src="http://www.theowlteacher.com/wp-content/uploads/2016/08/teachingelaborationwrting-e1470332790905.jpg" alt="https://www.instagram.com/p/BR6NqnBAMu8/?tagged=educacioninfantil" align="center">
+									<p>Ubicación</p>
+								</a>
+							</div>
+						</div>
 						<div class="row center">
 							<div class="header col s6 light">
 								<img id="tamanoimg" src="https://www.bbva.com/es/wp-content/uploads/2015/12/bbva-educacion-e1464704439593-1920x0-c-f.jpg" alt align="center">
@@ -181,20 +215,11 @@
 								<p>Chat</p>
 							</div>
 						</div>
-						<div class="row center">
-							<div class="header col s6 light">
-								<img id="tamanoimg" src="https://www.bbva.com/es/wp-content/uploads/2015/12/bbva-educacion-e1464704439593-1920x0-c-f.jpg" alt align="center">
-								<p>correo</p>
-							</div>
-							<div class="header col s6 light">
-								<img id="tamanoimg" src="http://www.theowlteacher.com/wp-content/uploads/2016/08/teachingelaborationwrting-e1470332790905.jpg" alt="https://www.instagram.com/p/BR6NqnBAMu8/?tagged=educacioninfantil" align="center">
-								<p>Ubicación</p>
-							</div>
-						</div>
+						
 						<div class="row center">
 							<div class="header col s12 light">
-								<img id="tamanoimg" src="https://www.bbva.com/es/wp-content/uploads/2015/12/bbva-educacion-e1464704439593-1920x0-c-f.jpg" alt align="center">
-								<p>inicio</p>
+								<img id="tamanoimg" src="http://www.theowlteacher.com/wp-content/uploads/2016/08/teachingelaborationwrting-e1470332790905.jpg" alt="https://www.instagram.com/p/BR6NqnBAMu8/?tagged=educacioninfantil" align="center">
+					<p>Inicio</p>
 							</div>
 						</div>
 					  
@@ -203,7 +228,81 @@
 				</div>
 				
 				
-			<!--	<div class="swiper-slide">Slide 3</div>-->
+			<div class="swiper-slide">
+				<div class="container center">
+			
+					<h4>Ubicación</h4>
+					<iframe width="300px"; height="300px"; src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.4394789485887!2d-74.06405418597974!3d4.693445243029084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9ac4516d2869%3A0x9bbe9a9cc2ceba18!2sIglesia+Santo+Domingo+Savio!5e0!3m2!1ses-419!2sco!4v1491449381012" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+					<p> inicio </p>							
+				</div>	
+			</div>
+			
+		<div class="swiper-slide">
+				<div class="container center">
+					<div Class="container">
+							<div class="row">
+								<div class="col s12 l12 m12">
+								<h4 id="titulo" class="header center white-text">Formulario de contacto</h4>
+								</div>
+							</div>
+							
+							<div class="row">
+								<div class="input-field col s6">
+									 <i class="material-icons prefix">account_circle</i>
+									<input value="" class="validate" id="txtnombreapellido" type="text" data-length="10">
+									<label for="txtnombreapellido" data-error="Maximo 10 caracteres" data-success="Bien hecho">First Name</label>
+								</div>
+								<div class="input-field col s6">
+									<i class="material-icons prefix">phone</i>
+									<input value="" class="validate" id="txtTel" type="text" data-length="10">
+									<label for="txtTel" data-error="Maximo 10 caracteres" data-success="Bien hecho">Telefono</label>
+								</div>
+							</div>
+							
+							<div class="row">
+								<div class="input-field col s6">
+									 <i class="material-icons prefix">email</i>
+									<input value="" class="validate" id="txtSMS" type="text" data-length="30">
+									<label for="txtSMS" data-error="Maximo 30 caracteres" data-success="Bien hecho">Mensaje</label>
+								</div>
+								<div class="input-field col s6">
+									<i class="material-icons prefix">email</i>
+									 <input id="email" type="email" class="validate">
+									<label for="email">Email</label>
+								</div>	
+							</div>
+							
+							<div class="row">
+								<div class="input-field col s6">
+									<p><p>
+									</div>
+								<div class="input-field col s6">
+									<button class="btn miBtn waves-effect waves-light" id="miBtn" type="submit" name="action">Submit
+										<i class="material-icons right">send</i>
+									</button>
+											<!--<img id="procesarGif" src="image/mail-animated.gif" alt="" height="200" width="200" style="display:none">
+								--></div>
+							</div>
+				
+					</div>							
+				</div>	
+			</div>
+			
+			<div class="swiper-slide">
+				<div class="container center">
+			
+					<h4>Telefono</h4>
+					<iframe width="300px"; height="300px"; src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.4394789485887!2d-74.06405418597974!3d4.693445243029084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9ac4516d2869%3A0x9bbe9a9cc2ceba18!2sIglesia+Santo+Domingo+Savio!5e0!3m2!1ses-419!2sco!4v1491449381012" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+					<p> 3016386603 </p>							
+				</div>	
+			</div>
+			<div class="swiper-slide">
+				<div class="container center">
+			
+					<h4>Chat</h4>
+					<div class="boton"><a href="whatsapp://send?text=(titulo-de-tu-website) - (url -de-tu-website)" data-action="share/whatsapp/share" >Compartir</a></div>					
+				</div>	
+			</div>
 			
 			</div>
 			<!-- If we need pagination -->
