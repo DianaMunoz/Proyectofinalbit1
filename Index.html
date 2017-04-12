@@ -12,23 +12,34 @@
 		<!--intoruccion de swiper -->
 		<!-- Link Swiper's CSS -->
 		<link rel="stylesheet" href="http://idangero.us/swiper/dist/css/swiper.min.css">
+		
 		<!--intoruccion de swiper 
 		<script src="dist/js/swiper.js"></script>
-	  <link href="dist/css/swiper.css" rel="stylesheet">
-	  <script src="dist/sweetalert.min.js"></script>
-	  <link rel="stylesheet" type="text/css" href="dist/sweetalert.css">
-	  <link href="index.html"/>-->
-		
+		  <link href="dist/css/swiper.css" rel="stylesheet">
+		  <script src="dist/sweetalert.min.js"></script>
+		  <link rel="stylesheet" type="text/css" href="dist/sweetalert.css">
+		  <link href="index.html"/>-->
+			
 		<script> 
-
-
 		  $(document).ready(function(){
 			// the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
-			$('.modal').modal();
-			
+			$('.modal').modal({
+      dismissible: true, // Modal can be dismissed by clicking outside of the modal
+      opacity: .01, // Opacity of modal background
+      inDuration:500, // Transition in duration
+      outDuration: 200, // Transition out duration
+      startingTop: '90%', // Starting top style attribute
+      endingTop: '10%', // Ending top style attribute
+      //ready: function(modal, trigger) { // Callback for Modal open. Modal and trigger parameters available.
+       // alert("Ready");
+        //console.log(modal, trigger);
+      //},
+      //complete: function() { alert('Closed'); } // Callback for Modal close
+    }
+  );
 			
 			$('#Familia1').click(function(){
-			    AbrilModal("Familia 1", "shdkashdaskdnask dsadasdklsajldjas asdas <br> sdjsdjdjdjs ");
+			 AbrilModal();
 			});
 			
 		  });
@@ -36,13 +47,13 @@
 		
 		 
         function AbrilModal(mensaje,titulo) {
-		 $('#tituloModal').html("");
-		 $('#textoModal').html("");
+		 //$('#tituloModal').html("");
+		 //$('#textoModal').html("");
 		 
 		 
 		 $('#tituloModal').append(titulo);
 		 $('#textoModal').append(mensaje);
-		 $('#textoModal').html("");
+		 //$('#textoModal').html("");
 		 
 		 
 		 $('#modal1').modal('open');
@@ -104,6 +115,7 @@
 		height:50px;
 		}
 	</style>
+	
 	<body>	
 		<div class="swiper-container">
 			<!-- Additional required wrapper -->
@@ -115,12 +127,9 @@
 					<img width="80px" height="80px" src="https://comunidadpedacitodecielo.files.wordpress.com/2016/07/13227168_880885455370210_814087698979683557_n.png?w=200&h=200&crop=1" alt align="center">
 					</a>
 					</div>
-					<br>
-					<br>
-	<!--				<div class="nav-wrapper container">			
-
-<!--					
-					  <ul class="left-side hide-on-med-and-down">
+					<br><br>
+					<!--<div class="nav-wrapper container">			
+					<!--<ul class="left-side hide-on-med-and-down">
 						<li><a href="#">Inicio</a></li>
 					  </ul>
 					  <ul class="right hide-on-med-and-down">
@@ -139,21 +148,24 @@
 					</div>-->
 				</nav>
 				
-				<br>
-				<br>
-				<br>
+				<br><br><br>
 			<div class="swiper-wrapper">
 				<!-- Slides -->
 				<div class="swiper-slide">
 					<div class="container">
+					<!-- Slides 1 -->
 					   <div class="row center">
 							<div class="header col s3 light" id="Familia1">
 								<img width="50px" height="50px" src="https://www.bbva.com/es/wp-content/uploads/2015/12/bbva-educacion-e1464704439593-1920x0-c-f.jpg" alt align="center">
-								<p>Familia 11</p>
+								<p>Familia PDC</p>
 							</div>
 							<div class="header col s3 light">
-								<img id="tamanoimg" src="https://www.bbva.com/es/wp-content/uploads/2015/12/bbva-educacion-e1464704439593-1920x0-c-f.jpg" alt align="center">
-								<p>Nosotros</p>
+							
+								<a href="Contactanospdc.html">
+									<img id="tamanoimg" src="https://www.bbva.com/es/wp-content/uploads/2015/12/bbva-educacion-e1464704439593-1920x0-c-f.jpg" alt align="center">
+									<p>Contactenos</p>
+								
+								</a>
 							</div>
 							<div class="header col s3 light">
 								<img id="tamanoimg" src="http://www.theowlteacher.com/wp-content/uploads/2016/08/teachingelaborationwrting-e1470332790905.jpg" alt="https://www.instagram.com/p/BR6NqnBAMu8/?tagged=educacioninfantil" align="center">
@@ -164,72 +176,69 @@
 								<p>Biblioteca</p>
 							</div>
 					  </div>
-					  
-					   <div class="row center">
+					  <div class="row center">
 						<div class="header col s3 light">
 							<img id="tamanoimg"  src="https://www.bbva.com/es/wp-content/uploads/2015/12/bbva-educacion-e1464704439593-1920x0-c-f.jpg" alt align="center">
-							<p>Familia</p>
+							<p>Testimonios</p>
 						</div>
 						<div class="header col s3 light">
 							<img id="tamanoimg"  src="https://www.bbva.com/es/wp-content/uploads/2015/12/bbva-educacion-e1464704439593-1920x0-c-f.jpg" alt align="center">
-							<p>Nosotros</p>
+							<p>Encuentros</p>
 						</div>
 						<div class="header col s3 light">
 							<img id="tamanoimg"  src="http://www.theowlteacher.com/wp-content/uploads/2016/08/teachingelaborationwrting-e1470332790905.jpg" alt="https://www.instagram.com/p/BR6NqnBAMu8/?tagged=educacioninfantil" align="center">
-							<p>Noticias</p>
+							<p>Recordatorios</p>
 						</div>
 						<div class="header col s3 light">
 						<img id="tamanoimg"  src="http://scontent.cdninstagram.com/t51.2885-15/s750x750/sh0.08/e35/17127212_215389495608656_7971971617959968768_n.jpg?ig_cache_key=MTQ2OTgwMjgxNjk4MTA2MzkwMQ%3D%3D.2" alt align="center">
-							<p>Biblioteca</p>
+							<p>Herramientas</p>
 						</div>
 					  </div>			  
 					</div>	
 				</div>
-				
+				<!-- Slides 2 -->
 				<div class="swiper-slide">
-				<div class="container center">
+					<div class="container center">
 						<div class="row">
 							<div class="header col l4 s4 light">
 							<img id="tamanoimg"  src="http://scontent.cdninstagram.com/t51.2885-15/s750x750/sh0.08/e35/17127212_215389495608656_7971971617959968768_n.jpg?ig_cache_key=MTQ2OTgwMjgxNjk4MTA2MzkwMQ%3D%3D.2" alt align="center">
-								<p>Biblioteca</p>
+								<p>Intersecion</p>
 							</div>
 							<div class="header col l4 s4 light">
 							<img id="tamanoimg"  src="http://scontent.cdninstagram.com/t51.2885-15/s750x750/sh0.08/e35/17127212_215389495608656_7971971617959968768_n.jpg?ig_cache_key=MTQ2OTgwMjgxNjk4MTA2MzkwMQ%3D%3D.2" alt align="center">
-								<p>Biblioteca</p>
+								<p>Apps</p>
 							</div>
 							<div class="header col l4 s4 light">
 							<img id="tamanoimg"  src="http://scontent.cdninstagram.com/t51.2885-15/s750x750/sh0.08/e35/17127212_215389495608656_7971971617959968768_n.jpg?ig_cache_key=MTQ2OTgwMjgxNjk4MTA2MzkwMQ%3D%3D.2" alt align="center">
-								<p>Biblioteca</p>
+								<p>Social</p>
 							</div>
 						</div>
 						
 						<div class="row">
 							<div class="col l4 s4">
 							<img id="tamanoimg"  src="http://scontent.cdninstagram.com/t51.2885-15/s750x750/sh0.08/e35/17127212_215389495608656_7971971617959968768_n.jpg?ig_cache_key=MTQ2OTgwMjgxNjk4MTA2MzkwMQ%3D%3D.2" alt align="center">
-								<p>Biblioteca</p>
+								<p>Fotos</p>
 							</div>
 							<div class="col l4 s4 light">
 							<img id="tamanoimg"  src="http://scontent.cdninstagram.com/t51.2885-15/s750x750/sh0.08/e35/17127212_215389495608656_7971971617959968768_n.jpg?ig_cache_key=MTQ2OTgwMjgxNjk4MTA2MzkwMQ%3D%3D.2" alt align="center">
-								<p>Biblioteca</p>
+								<p>Videos</p>
 							</div>
 							<div class="col l4 s4 light">
 							<img id="tamanoimg"  src="http://scontent.cdninstagram.com/t51.2885-15/s750x750/sh0.08/e35/17127212_215389495608656_7971971617959968768_n.jpg?ig_cache_key=MTQ2OTgwMjgxNjk4MTA2MzkwMQ%3D%3D.2" alt align="center">
-								<p>Biblioteca</p>
+								<p>Audios</p>
 							</div>
 						</div>
 					</div>
 				</div>
-			<!--	<div class="swiper-slide">Slide 3</div>-->
-			
+				<!--	<div class="swiper-slide">Slide 3</div>-->
 			</div>
 			<!-- If we need pagination -->
 			<div class="swiper-pagination"></div>
 			
-			
-			<div id="modal1" class="modal bottom-sheet">
+			<div id="modal1" class="modal modal-fixed-footer">
 				<div class="modal-content">
-				  <h4 id="tituloModal"></h4>
-				  <p id="textoModal"></p>
+				  <h4 id="tituloModal">Familia pdc</h4>
+				  <p id="textoModal">estamos en contruccion</p>
 				</div>
 				<div class="modal-footer">
 				  <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Aceptar</a>
@@ -254,7 +263,18 @@
         nextButton: '.swiper-button-next',
         prevButton: '.swiper-button-prev',
         parallax: true,
+		  effect: 'cube',
         speed: 600,
+		//autoplay: 2500,
+        //autoplayDisableOnInteraction: false
+		coverflow: {
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows : true
+        }
+
 		});
 		</script>
 		<script src="js/materialize.js"></script>
