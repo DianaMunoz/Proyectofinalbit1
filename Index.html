@@ -23,41 +23,48 @@
 		<script> 
 		  $(document).ready(function(){
 			// the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
-			$('.modal').modal({
-			      dismissible: true, // Modal can be dismissed by clicking outside of the modal
-      opacity: .01, // Opacity of modal background
-      inDuration:500, // Transition in duration
-      outDuration: 200, // Transition out duration
-      startingTop: '90%', // Starting top style attribute
-      endingTop: '10%', // Ending top style attribute
-      //ready: function(modal, trigger) { // Callback for Modal open. Modal and trigger parameters available.
-       // alert("Ready");
-        //console.log(modal, trigger);
-      //},
-      //complete: function() { alert('Closed'); } // Callback for Modal close
-    }
-  );
-			
-			$('#Familia1').click(function(){
-			 AbrilModal();
+			$('.modal').modal(
+			{
+								  dismissible: true, // Modal can be dismissed by clicking outside of the modal
+								  opacity: .01, // Opacity of modal background
+								  inDuration:500, // Transition in duration
+								  outDuration: 200, // Transition out duration
+								  startingTop: '90%', // Starting top style attribute
+								  endingTop: '10%', // Ending top style attribute
+								  //ready: function(modal, trigger) { // Callback for Modal open. Modal and trigger parameters available.
+								   // alert("Ready");
+									//console.log(modal, trigger);
+								  //},
+								  //complete: function() { alert('Closed'); } // Callback for Modal close
 			});
 			
-		  });
-						
-		
-		 
-        function AbrilModal(mensaje,titulo) {
+		$('#Familia1').click(function()
+			{
+			 AbrilModal();
+			});
+		$('#social').click(function()
+			{
+			 AbrilModalsocial();
+			});
+			
+			
+			});
+						 
+        function AbrilModal(mensaje,titulo) 
+		{
 		 //$('#tituloModal').html("");
-		 //$('#textoModal').html("");
-		 
-		 
+		 //$('#textoModal').html(""); 
 		 $('#tituloModal').append(titulo);
 		 $('#textoModal').append(mensaje);
-		 //$('#textoModal').html("");
-		 
-		 
-		 $('#modal1').modal('open');
-		
+		 //$('#textoModal').html("");		 
+		 $('#modal1').modal('open');		
+        }		
+		function AbrilModalsocial() 
+		{
+		 //$('#tituloModal').html("");
+		 //$('#textoModal').html(""); 
+		 //$('#textoModal').html("");		 
+		 $('#modalsocial').modal('open');		
         }		
 		</script>
 	</head>
@@ -156,7 +163,7 @@
 					<!-- Slides 1 -->
 					   <div class="row center">
 							<div class="header col s3 light" id="Familia1">
-								<img width="50px" height="50px" src="https://www.bbva.com/es/wp-content/uploads/2015/12/bbva-educacion-e1464704439593-1920x0-c-f.jpg" alt align="center">
+								<img width="60px" height="60px" src="image/familia.png" alt align="center">
 								<p>Familia PDC</p>
 							</div>
 							<div class="header col s3 light">
@@ -208,7 +215,7 @@
 							<img id="tamanoimg"  src="http://scontent.cdninstagram.com/t51.2885-15/s750x750/sh0.08/e35/17127212_215389495608656_7971971617959968768_n.jpg?ig_cache_key=MTQ2OTgwMjgxNjk4MTA2MzkwMQ%3D%3D.2" alt align="center">
 								<p>Apps</p>
 							</div>
-							<div class="header col l4 s4 light">
+							<div class="header col l4 s4 light" id="social">
 							<img id="tamanoimg"  src="http://scontent.cdninstagram.com/t51.2885-15/s750x750/sh0.08/e35/17127212_215389495608656_7971971617959968768_n.jpg?ig_cache_key=MTQ2OTgwMjgxNjk4MTA2MzkwMQ%3D%3D.2" alt align="center">
 								<p>Social</p>
 							</div>
@@ -232,8 +239,6 @@
 				</div>
 				<!--	<div class="swiper-slide">Slide 3</div>-->
 			</div>
-			<!-- If we need pagination -->
-			<div class="swiper-pagination"></div>
 			
 			<div id="modal1" class="modal modal-fixed-footer">
 				<div class="modal-content">
@@ -245,6 +250,22 @@
 				</div>
 			  </div>
 			  
+			<!-- Modal Structure social  -->
+			  <div id="modalsocial" class="modal modal-fixed-footer">
+				<div class="modal-content">
+				<h4>Redes</h4>
+					<a href="www.facebook.com/pedacitodecielo.org" class="modal-action modal-close waves-effect waves-green btn-flat ">instagram</a>
+				</div>
+				<div class="modal-footer">
+				  <a href="www.facebook.com/pedacitodecielo.org" class="modal-action modal-close waves-effect waves-green btn-flat ">facebook</a>
+				
+				</div>
+			  </div>
+  
+			<!-- If we need pagination -->
+			<div class="swiper-pagination">
+			</div>
+					  
 			<!-- If we need navigation buttons -->
 			<div class="swiper-button-prev"></div>
 			<div class="swiper-button-next"></div>
